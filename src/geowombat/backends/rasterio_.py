@@ -561,8 +561,8 @@ def get_file_bounds(
             )
 
         else:
-            bounds_width = int((bounds_right - bounds_left) / abs(dst_res[0]))
-            bounds_height = int((bounds_top - bounds_bottom) / abs(dst_res[1]))
+            bounds_width = round((bounds_right - bounds_left) / abs(dst_res[0]))
+            bounds_height = round((bounds_top - bounds_bottom) / abs(dst_res[1]))
 
             bounds_transform = from_bounds(
                 bounds_left,
