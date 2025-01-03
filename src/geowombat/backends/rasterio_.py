@@ -43,8 +43,8 @@ logger = logging.getLogger(__name__)
 def get_dims_from_bounds(
     bounds: BoundingBox, res: T.Tuple[float, float]
 ) -> T.Tuple[int, int]:
-    width = int((bounds.right - bounds.left) / abs(res[0]))
-    height = int((bounds.top - bounds.bottom) / abs(res[1]))
+    width = round((bounds.right - bounds.left) / abs(res[0]))
+    height = round((bounds.top - bounds.bottom) / abs(res[1]))
 
     return height, width
 
